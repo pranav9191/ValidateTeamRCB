@@ -30,6 +30,13 @@ public class TestListner implements ITestListener{
 		extentTest.get().log(Status.PASS, m);
 	}
 	
+	public void onTestFailure(ITestResult result)
+	{
+		String logTest = "<b> Test method " + result.getMethod().getMethodName() + " Failed<b>";
+		Markup m = MarkupHelper.createLabel(logTest, ExtentColor.RED);
+		extentTest.get().log(Status.FAIL, m);
+	}
+	
 	public void onFinish(ITestContext context)
 	{
 		if(extent!=null) extent.flush();
