@@ -3,11 +3,12 @@
 <suite name="Failed suite [Default suite]" guice-stage="DEVELOPMENT">
   <test thread-count="5" name="Default test(failed)">
     <classes>
-      <class name="testpackage.ValidateTeamRCB">
+      <class name="testpackage.ValidateTeamRCB2">
         <methods>
+          <include name="aftertest"/>
           <include name="validateTeamRCB"/>
         </methods>
-      </class> <!-- testpackage.ValidateTeamRCB -->
+      </class> <!-- testpackage.ValidateTeamRCB2 -->
     </classes>
   </test> <!-- Default test(failed) -->
 </suite> <!-- Failed suite [Default suite] -->
